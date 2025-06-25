@@ -2,6 +2,13 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import requests
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+HF_TOKEN = os.getenv("HF_TOKEN")
+HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
+
 
 app = FastAPI()
 
@@ -13,9 +20,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-
-HF_TOKEN = "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"
-HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
 
 def query(model, payload):
     url = f"https://api-inference.huggingface.co/models/{model}"
