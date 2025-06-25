@@ -4,7 +4,7 @@ import requests
 
 app = FastAPI()
 
-HF_TOKEN = "Your api key bruh"
+HF_TOKEN = "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"
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
 
 def query(model, payload):
