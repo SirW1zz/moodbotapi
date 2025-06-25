@@ -16,7 +16,7 @@ export default function App() {
   const handleSend = async () => {
     if (!input.trim()) return;
     try {
-      const res = await fetch(`http://localhost:8000/${selected}`, {
+     const res = await fetch(`https://moodbotapi.onrender.com/${selected}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: input }),
