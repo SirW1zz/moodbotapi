@@ -14,7 +14,7 @@ app.add_middleware(
 )
 
 
-HF_TOKEN = "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"
+HF_TOKEN = "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"
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
 
 def query(model, payload):
