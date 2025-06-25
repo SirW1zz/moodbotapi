@@ -7,11 +7,12 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Change "*" to your frontend URL in production
+    allow_origins=["https://moodbotapi.vercel.app"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
 
 HF_TOKEN = "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"
 HEADERS = {"Authorization": f"Bearer {HF_TOKEN}"}
