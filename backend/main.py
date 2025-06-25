@@ -5,11 +5,7 @@ import requests
 
 app = FastAPI()
 
-origins = [
-    "https://moodbotapi.vercel.app",
-    "http://localhost:3000",
-]
-
+# Allow all origins for now, update later with your frontend URL for security
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
